@@ -1,0 +1,48 @@
+.ext_desktop_dl_btn{
+    position: absolute!important;
+    text-decoration: none !important;
+    z-index: 2;
+    line-height: 1.2;
+    padding: 5px;
+    top: 2%;
+    left: 2%;
+    display: none!important;
+    background:#fff;
+    font-weight: 700;
+    color:#0f0f11 !important;
+    transition: all .3s ease-in-out;
+    opacity: .7;
+    cursor: pointer;
+    font-family: "lucida grande", sans-serif;
+    border-radius: 14px;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px #ccc;
+    }
+
+.ext_desktop_dl_Wrapper:hover .ext_desktop_dl_btn
+{
+    opacity: 1;
+    display: flex!important;
+}
+
+.ext_desktop_dl_btn .ext_icon
+{    
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(/icons/download-48.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.ext_desktop_dl_btn .ext_text
+{
+    font-size: 12px;
+    letter-spacing: -.3px;
+    margin-left: 5px;
+    margin-right: 4px;
+}

@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Insta Download",
+    "version": "1.1",  
+    "description": "Download From Insta",  
+    "icons": {
+      "48": "icons/download-48.png"
+    },  
+    "web_accessible_resources": ["icons/download-48.png"],
+    "permissions": [
+		"downloads"
+    ],
+    "background": {
+        "scripts": [
+          "js/download.js"          
+        ]
+      },
+    "content_scripts": [
+      {
+        "matches": ["*://*.instagram.com/*"],
+        "js": [            
+            "js/jquery.js",
+            "index.js"
+        ],
+        "css": [
+            "css/index.css"
+        ]
+      }
+    ]
+  
+  }
