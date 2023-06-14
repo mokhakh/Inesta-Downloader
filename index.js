@@ -15,6 +15,18 @@ $(document).on("click","a.ext_desktop_dl_btn",function(){
     var img= $(this).parent().find("img");
     var vid = $(this).parent().find("video");
 
+    // Angelim 09/05/23 00:31
+    var ttl = document.title;
+
+    ttl = ttl.replace("Fotos e vídeos do Instagram","");
+    ttl = ttl.replace("Instagram","");
+    ttl = ttl.replace(/[^A-Za-z0-9-@_]/g, ' ');
+    ttl = ttl.replaceAll("  "," ");
+    //    ttl = ttl.replaceAll("#","");
+    //    ttl = ttl.replaceAll("@","");
+    //    ttl = ttl.replaceAll("!","");
+    // End of Update Angelim
+
     var url ;
     var ext = '';
     if(vid.length >0){
@@ -29,9 +41,8 @@ $(document).on("click","a.ext_desktop_dl_btn",function(){
     if(!url)
         return;       
 
-    try{        
-        console.log(url)
-        browser.runtime.sendMessage({"url": url,"ext":ext});
+    try{                
+            browser.runtime.sendMessage({"title": ttl ,"url": url,"ext":ext});
     }catch(e){
         console.log(e);
     }
